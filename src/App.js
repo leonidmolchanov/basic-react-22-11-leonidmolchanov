@@ -5,7 +5,8 @@ import ArticleList from './components/article-list'
 import ArticlesChart from './components/articles-chart'
 import UserForm from './components/user-form'
 import Select from 'react-select'
-
+import Picker from 'react-day-picker'
+import 'react-day-picker/lib/style.css'
 class App extends Component {
   state = {
     selected: null
@@ -23,6 +24,7 @@ class App extends Component {
           onChange={this.handleSelectionChange}
           isMulti
         />
+          <Picker />
         <ArticleList articles={articles} ref={this.setArticleListRef} />
         <ArticlesChart articles={articles} />
       </div>
